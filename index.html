@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURD Opration System</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!--Start navbar Section -->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand ms-4"><img src="image/logo.png" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center my-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" routerLinkActive="activeLink , nav-link">Home</a
+                >
+              </li>
+                    <li class="nav-item">
+                        <a class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--End navbar Section -->
+
+    <!--Start CRUD Section -->
+    <div class="container  my-5">
+        <div class="row ">
+            <div class=" curdTitle text-center ">
+                <h1 class="pb-3 ">Crud Opration System </h1>
+                <p class="pb-3 crudDesc ">(C . U . R . D)</p>
+            </div>
+            <div class="col-md-12 bg ">
+                <div class="crudContent w-75 m-auto ">
+                    <h4 class="pb-2 ">Enter New Product </h4>
+                    <small class="smallTitle">Please enter all new products into this form using the following entries...
+                        After completing the entry of these products in a way, click on the add button to add this product in your products table </small>
+                    <div class="inputGroup ">
+                        <label class="pb-3 pt-4 " for="ProductName ">Product Name :-</label> <span class="text-danger ">*</span>
+                        <input class="form-control" type="text " id="ProductName">
+                        <div id="alertName" class=" alert-danger py-1 text-dark my-2 d-none ">
+                            <p>The first letter of the product Name must be a capital letter For Ex(A-Z)</p>
+                            <p>The must not contain product Name symbols For <span>Ex ( @ % .. )</span> </p>
+                            <p>The number of product Name characters should minlenght 3 and maxlenght 8 For Ex(Samsong)</p>
+                        </div>
+                    </div>
+                    <div class="inputGroup ">
+                        <label class="pb-3 pt-4 " for="ProductCatagory ">Product Catagory :-</label><span class="text-danger ">*</span>
+                        <input class="form-control" type="text " id="ProductCatagory">
+                        <div id="alertCatagory" class=" alert-danger py-1 text-dark my-2 d-none ">
+                            <p>The first letter of the product Catagory must be a capital letter For Ex(A-Z)</p>
+                            <p>The price must not contain letters or symbols For <span>Ex(a-z or @ % .. )</span> </p>
+                        </div>
+                    </div>
+                    <div class="inputGroup">
+                        <label class="pb-3 pt-4 " for="ProductPrice ">Product Price :-</label><span class="text-danger ">*</span>
+                        <input class="form-control " type="number " id="ProductPrice">
+                        <div id="alertPrice" class=" alert-danger py-1 text-dark my-2 d-none ">
+                            <p>The price must not contain letters or symbols For <span>Ex(a-z or @ % .. )</span></p>
+                        </div>
+                    </div>
+                    <div class="inputGroup ">
+                        <label class="pb-3 pt-4 " for="ProductDescription ">Product Description :-</label><span class="text-danger ">*</span>
+                        <textarea class="form-control " id="ProductDescription" cols="117 " rows="5 "></textarea>
+                        <div id="alertDesc" class=" alert-danger py-1 text-dark my-2 d-none ">
+                            <p>You Should write Description For Product</p>
+                        </div>
+                    </div>
+                    <div class="btnCont float-end ">
+                        <button disabled id="addBtn" class="btn btn-outline-success mt-3 me-3 ">Add Product</button>
+                        <button id="clearBtn" class="btn btn-outline-dark mt-3 ">Clear Product</button>
+                    </div>
+                    <div class="clear-fix "></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------Start Product List-------------------------------------------->
+    <div class="container my-5 ">
+        <div class="row text-center ">
+            <hr>
+            <div class="curdTitle text-center ">
+                <h1 class="pb-3 my-4 ">Products Lists</h1>
+            </div>
+            <div class="col-md-12 ">
+                <input onkeyup="search(this.value) " type="search " class="form-control w-75 m-auto my-3 " placeholder="Search By Products Name ..... ">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="container m-auto">
+                            <div class="tableContent w-100  py-3 ">
+                                <table class="table table-striped ">
+                                    <thead>
+                                        <th>Index</th>
+                                        <th>Product Name</th>
+                                        <th>Product Catagory</th>
+                                        <th>Product Price</th>
+                                        <th>Product Description</th>
+                                        <th></th>
+                                        <th></th>
+                                    </thead>
+                                    <tbody class="" id="tbodyProductData">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------Start Footer section------------->
+    <footer class="bg-dark pt-4 pb-3 ">
+        <div class="container text-white text-center ">
+            <div class="row ">
+                <div class="col-md-7 text-center ">
+                    <p>Copyright <i class="Copyright fa fa-copyright "></i> March 2022 All Rights Reseved by
+                        <a class="myNames text-decoration-none ">Pro Taher Salah</a>
+                    </p>
+                </div>
+                <div class="col-md-4 ">
+                    <ul class="list-unstyled ">
+                        <a class="text-decoration-none" href="https://www.facebook.com/taher.salah.7927 " target="_blank ">
+                            <li class="socialMe list-inline-item "><i class="fab1 fab fa-facebook "></i></li>
+                        </a>
+                        <a class="text-decoration-none" href="https://www.instagram.com/tahersalahm/ " target="_blank ">
+                            <li class="socialMe list-inline-item "><i class="fab2 fab fa-instagram "></i></li>
+                        </a>
+                        <a class="text-decoration-none" href="https://www.linkedin.com/in/taher-salah-1a5622134/ " target="_blank ">
+                            <li class="socialMe list-inline-item "><i class="fab3 fab fa-linkedin "></i></li>
+                        </a>
+                        <a class="text-decoration-none" href=" " target="_blank ">
+                            <li class="socialMe list-inline-item "><i class="fab4 fab fa-twitter "></i></li>
+                        </a>
+                        <a class="text-decoration-none" href="https://github.com/TaherSalah " target="_blank ">
+                            <li class="socialMe list-inline-item "><i class="fab5 fab fa-github "></i></li>
+                        </a>
+                        <a class="text-decoration-none" href="# ">
+                            <li class="socialMe list-inline-item "><i class="fab6 fab fa-google "></i></li>
+                        </a>
+                        <a class="text-decoration-none" href="https://api.whatsapp.com/send/?phone=01094529752&text&app_absent=0 " target="_blank ">
+                            <li class="socialMe list-inline-item "><i class="fab7 fab fa-whatsapp "></i></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/all.min.js "></script>
+    <script src="js/bootstrap.bundle.min.js "></script>
+    <script src="js/main.js "></script>
+</body>
+
+</html>
+
+</html>
+
+</html>

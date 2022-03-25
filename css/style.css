@@ -1,0 +1,286 @@
+                            * {
+                                padding: 0;
+                                margin: 0;
+                                box-sizing: border-box;
+                            }
+                            
+                            @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+                            /* body {
+    background-color: bisque;
+} */
+                            
+                            h3 a {
+                                text-decoration: none;
+                                color: #fff;
+                                font-weight: 700;
+                                font-family: "Montserrat" !important;
+                            }
+                            
+                            .navbar {
+                                background-color: transparent !important;
+                            }
+                            
+                            .navbar-brand img {
+                                width: 8rem;
+                            }
+                            
+                            ul li a {
+                                transition: all 0.5s linear;
+                                color: #333333 !important;
+                                text-decoration: none;
+                                font-family: "Montserrat", sans-serif !important;
+                                font-weight: 600;
+                                margin-left: 10px;
+                                letter-spacing: 1.5px;
+                            }
+                            
+                            .nav-link {
+                                transition: all 1s linear;
+                            }
+                            
+                            .activeLink {
+                                background-color: #ff58427d;
+                                border-radius: 30px;
+                            }
+                            
+                            .nav-link:hover {
+                                background-color: #ff58427d;
+                                border-radius: 30px;
+                            }
+                            /* style of CURD */
+                            
+                            .form-control {
+                                width: 100%;
+                                font-size: 1.3rem;
+                            }
+                            
+                            .curdTitle {
+                                margin-top: 98px;
+                            }
+                            
+                            .cartIcon {
+                                cursor: pointer;
+                                margin-top: -9px;
+                            }
+                            
+                            .logo {
+                                letter-spacing: 6px;
+                                margin-right: 20px;
+                            }
+                            
+                            .navActive {
+                                background-color: beige;
+                                border-radius: 20%;
+                            }
+                            
+                            .test {
+                                font-weight: 900;
+                            }
+                            
+                            .fab {
+                                cursor: pointer;
+                            }
+                            
+                            .dropdown-menu {
+                                background-color: transparent;
+                                border: 1px solid transparent;
+                                border-radius: 30px;
+                            }
+                            
+                            .dropdown-menu li a {
+                                color: #000000 !important;
+                                transition: all linear 0.5s;
+                                border-radius: 30px;
+                                background-color: transparent !important;
+                            }
+                            
+                            .dropdown-menu li a:hover {
+                                color: #ff58427d !important;
+                            }
+                            /********************************************************* Start Footer Style Sction****************************************************/
+                            
+                            .imageStore {
+                                width: 100px;
+                                cursor: pointer;
+                                transition: all 0.4s linear;
+                            }
+                            
+                            .imageStore:hover {
+                                transform: translateY(-5px);
+                            }
+                            
+                            .imageBrand {
+                                width: 100px;
+                                margin-bottom: 10px;
+                            }
+                            
+                            .UsefullLinks li {
+                                margin-bottom: 14px !important;
+                                cursor: pointer;
+                                transition: all 0.5s linear;
+                            }
+                            
+                            .titleLinks {
+                                font-size: 19px !important;
+                                font-family: 'Anton', sans-serif !important;
+                                cursor: pointer;
+                                transition: all 0.3s linear;
+                                color: #ffffff;
+                            }
+                            
+                            .IES {
+                                color: #7502d9;
+                                margin-left: 5px;
+                                font-family: 'Anton', sans-serif !important;
+                                cursor: pointer;
+                                font-size: 30px !important;
+                                letter-spacing: 4px;
+                            }
+                            
+                            .moviePra {
+                                margin-top: 26px;
+                            }
+                            
+                            .mov {
+                                letter-spacing: 4px;
+                                margin-top: 11px;
+                            }
+                            
+                            .footerLogoinks a:hover {
+                                transform: translateY(-6px) !important;
+                                color: #761778;
+                            }
+                            
+                            .titleLinks:hover {
+                                transform: translateY(-6px);
+                                color: #761778;
+                            }
+                            
+                            .UsefullLinks li:hover {
+                                color: #ff523b;
+                                transform: translateX(-5px);
+                            }
+                            
+                            .icon {
+                                font-size: 12px !important;
+                                transition: all 0.5s linear;
+                            }
+                            
+                            .desc {
+                                transition: all 0.5s linear !important;
+                                cursor: pointer;
+                            }
+                            
+                            .icon,
+                            .desc:hover {
+                                transform: translateX(-5px);
+                                color: #ff523b !important;
+                            }
+                            
+                            .myNames {
+                                color: #ff523b;
+                                font-weight: 700;
+                                cursor: pointer;
+                            }
+                            
+                            .socialMe {
+                                cursor: pointer;
+                            }
+                            
+                            .socialMe .fab1:hover {
+                                color: #1877f2 !important;
+                                transform: translateY(-5px);
+                            }
+                            
+                            .socialMe .fab2:hover {
+                                color: #c32aa3!important;
+                                transform: translateY(-5px);
+                            }
+                            
+                            .socialMe .fab3:hover {
+                                color: #0a66c2 !important;
+                                transform: translateY(-5px);
+                            }
+                            
+                            .socialMe .fab4:hover {
+                                color: #1da1f2 !important;
+                                transform: translateY(-5px);
+                            }
+                            
+                            .socialMe .fab5:hover {
+                                color: #fbff003b !important;
+                                transform: translateY(-5px);
+                            }
+                            
+                            .socialMe .fab6:hover {
+                                color: #4285f4 !important;
+                                transform: translateY(-5px);
+                            }
+                            
+                            .socialMe .fab7:hover {
+                                color: #25d366!important;
+                                transform: translateY(-5px);
+                            }
+                            
+                            .socialMe .svg-inline--fa {
+                                color: #ffffff !important;
+                                font-size: 15px;
+                                transition: all 0.5s linear;
+                                margin-left: 5px;
+                            }
+                            /********************************************************* End Footer Style Sction****************************************************/
+                            /**********************************************************Start Media Query Responsive*************************************************/
+                            
+                            @media only screen and (max-width: 600px) {
+                                .row {
+                                    text-align: center;
+                                }
+                                .col-2,
+                                .col-3,
+                                .col-4 {
+                                    flex-basis: 100%;
+                                }
+                                .pBrand {
+                                    margin-top: 10px;
+                                }
+                                .imageBrand {
+                                    width: 35%;
+                                }
+                                .sefullLinks li {
+                                    text-align: center;
+                                }
+                                .infoIcon h4,
+                                p {
+                                    text-align: center;
+                                }
+                                .desc {
+                                    position: relative;
+                                }
+                                .icon {
+                                    position: absolute;
+                                    top: 45%;
+                                    left: 25%;
+                                    font-size: 15px !important;
+                                }
+                                @media only screen and (min-width: 992px) {
+                                    .desc {
+                                        position: relative;
+                                    }
+                                    .icon {
+                                        position: absolute;
+                                        top: 45%;
+                                        right: 97%;
+                                        font-size: 18px !important;
+                                    }
+                                }
+                            }
+                            
+                            @media only screen and (max-width: 667px) {
+                                .tableContent table {
+                                    width: 100%;
+                                }
+                                thead th {
+                                    font-size: 0.8rem !important;
+                                }
+                            }
+                            /**********************************************************End Media Query Responsive*************************************************/
